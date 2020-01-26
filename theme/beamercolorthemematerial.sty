@@ -1,0 +1,506 @@
+\mode<presentation>
+
+% light theme
+\newcommand{\useLightTheme}{
+\definecolor{text}        {HTML}{000000}
+\setbeamercolor*{normal text}{fg=text}
+
+\definecolor{shadow}{HTML}{000000}
+\definecolor{BGgrey01}{HTML}{E0E0E0}
+\definecolor{BGgrey02}{HTML}{F5F5F5}
+\definecolor{BGgrey03}{HTML}{FAFAFA}
+\definecolor{BGgrey04}{HTML}{FFFFFF}
+
+\definecolor{Red}{HTML}{F44336}
+\definecolor{Pink}{HTML}{E91E63}
+\definecolor{Purple} {HTML}{9c27b0}
+\definecolor{DeepPurple} {HTML}{673AB7}
+\definecolor{Indigo} {HTML}{3F51B5}
+\definecolor{Blue} {HTML}{2196F3}
+\definecolor{acLightBluecent} {HTML}{03A9F4}
+\definecolor{Cyan} {HTML}{00BCD4}
+\definecolor{Teal} {HTML}{009688}
+\definecolor{Green} {HTML}{4CAF50}
+\definecolor{LightGreen} {HTML}{8BC34A}
+\definecolor{Lime} {HTML}{CDDC39}
+\definecolor{Yellow} {HTML}{FFEB3B}
+\definecolor{Amber} {HTML}{FFC400}
+\definecolor{Orange} {HTML}{FFC107}
+\definecolor{DeepOrange} {HTML}{FF5722}
+\definecolor{BlueGrey} {HTML}{607D8B}
+\definecolor{Brown} {HTML}{795548}
+\definecolor{Grey} {HTML}{9E9E9E}
+}
+
+
+% dark theme
+\newcommand{\useDarkTheme}{
+\definecolor{text}        {HTML}{FFFFFF}
+\setbeamercolor*{normal text}{fg=text}
+
+\definecolor{shadow}{HTML}{000000}
+\definecolor{BGgrey01}{HTML}{000000}
+\definecolor{BGgrey02}{HTML}{212121}
+\definecolor{BGgrey03}{HTML}{303030}
+\definecolor{BGgrey04}{HTML}{424242}
+
+\definecolor{Red}{HTML}{F44336}
+\definecolor{Pink}{HTML}{E91E63}
+\definecolor{Purple} {HTML}{9c27b0}
+\definecolor{DeepPurple} {HTML}{673AB7}
+\definecolor{Indigo} {HTML}{3F51B5}
+\definecolor{Blue} {HTML}{2196F3}
+\definecolor{acLightBluecent} {HTML}{03A9F4}
+\definecolor{Cyan} {HTML}{00BCD4}
+\definecolor{Teal} {HTML}{009688}
+\definecolor{Green} {HTML}{4CAF50}
+\definecolor{LightGreen} {HTML}{8BC34A}
+\definecolor{Lime} {HTML}{CDDC39}
+\definecolor{Yellow} {HTML}{FFEB3B}
+\definecolor{Amber} {HTML}{FFC400}
+\definecolor{Orange} {HTML}{FFC107}
+\definecolor{DeepOrange} {HTML}{FF5722}
+\definecolor{BlueGrey} {HTML}{607D8B}
+\definecolor{Brown} {HTML}{795548}
+\definecolor{Grey} {HTML}{9E9E9E}
+}
+
+% PRIMARY --------------------------------------------------------------
+\newcommand{\usePrimary}[3]{
+\definecolor{primary} {HTML}{#1}
+\definecolor{primaryD}{HTML}{#2}
+\definecolor{textPrimary} {HTML}{#3}
+}
+
+% Primary Red
+\newcommand{\usePrimaryRed}{
+\definecolor{primaryLL}{HTML}{EF9A9A}
+\definecolor{primaryL}{HTML}{E57373}
+\definecolor{primary} {HTML}{F44336}
+\definecolor{primaryD}{HTML}{D32F2F}
+\definecolor{primaryDD}{HTML}{B71C1C}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+% Primary Pink
+\newcommand{\usePrimaryPink}{
+\definecolor{primaryLL} {HTML}{f48fb1}
+\definecolor{primaryL} {HTML}{F06292}
+\definecolor{primary} {HTML}{E91E63}
+\definecolor{primaryD}{HTML}{C2185B}
+\definecolor{primaryDD}{HTML}{880e4f}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+% Primary Purple
+\newcommand{\usePrimaryPurple}{
+\definecolor{primaryLL} {HTML}{ce93d8}
+\definecolor{primaryL} {HTML}{BA68C8}
+\definecolor{primary} {HTML}{9c27b0}
+\definecolor{primaryD}{HTML}{7B1FA2}
+\definecolor{primaryDD}{HTML}{4a148c}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+% Primary Deep Purple
+\newcommand{\usePrimaryDeepPurple}{
+\definecolor{primaryLL} {HTML}{b39ddb}
+\definecolor{primaryL} {HTML}{9575cd}
+\definecolor{primary} {HTML}{673AB7}
+\definecolor{primaryD}{HTML}{512DA8}
+\definecolor{primaryDD}{HTML}{311b92}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+% Primary Indigo
+\newcommand{\usePrimaryIndigo}{
+\definecolor{primaryLL} {HTML}{9fa8da}
+\definecolor{primaryL} {HTML}{7986CB}
+\definecolor{primary} {HTML}{3F51B5}
+\definecolor{primaryD}{HTML}{303F9F}
+\definecolor{primaryDD}{HTML}{1a237e}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+% Primary Blue
+\newcommand{\usePrimaryBlue}{
+\definecolor{primaryLL} {HTML}{90caf9}
+\definecolor{primaryL} {HTML}{64B5F6}
+\definecolor{primary} {HTML}{2196F3}
+\definecolor{primaryD}{HTML}{1976D2}
+\definecolor{primaryDD}{HTML}{0d47a1}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+% Primary Light Blue
+\newcommand{\usePrimaryLightBlue}{
+\definecolor{primaryLL} {HTML}{81d4fa}
+\definecolor{primaryL} {HTML}{4FC3F7}
+\definecolor{primary} {HTML}{03A9F4}
+\definecolor{primaryD}{HTML}{0288D1}
+\definecolor{primaryDD}{HTML}{01579b}
+\definecolor{textPrimary} {HTML}{000000}
+}
+
+% Primary Cyan
+\newcommand{\usePrimaryCyan}{
+\definecolor{primaryLL} {HTML}{80deea}
+\definecolor{primaryL} {HTML}{4DD0E1}
+\definecolor{primary} {HTML}{00BCD4}
+\definecolor{primaryD}{HTML}{0097A7}
+\definecolor{primaryDD}{HTML}{006064}
+\definecolor{textPrimary} {HTML}{000000}
+}
+
+% Primary Teal
+\newcommand{\usePrimaryTeal}{
+\definecolor{primaryLL} {HTML}{80cbc4}
+\definecolor{primaryL} {HTML}{4DB6AC}
+\definecolor{primary} {HTML}{009688}
+\definecolor{primaryD}{HTML}{00796B}
+\definecolor{primaryDD}{HTML}{004d40}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+% Primary Green
+\newcommand{\usePrimaryGreen}{
+\definecolor{primaryLL} {HTML}{a5d6a7}
+\definecolor{primaryL} {HTML}{81C784}
+\definecolor{primary} {HTML}{4CAF50}
+\definecolor{primaryD}{HTML}{388E3C}
+\definecolor{primaryDD}{HTML}{1b5e20}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+% Primary Light Green
+\newcommand{\usePrimaryLightGreen}{
+\definecolor{primaryLL} {HTML}{c5e1a5}
+\definecolor{primaryL} {HTML}{AED581}
+\definecolor{primary} {HTML}{8BC34A}
+\definecolor{primaryD}{HTML}{689F38}
+\definecolor{primaryDD}{HTML}{33691e}
+\definecolor{textPrimary} {HTML}{000000}
+}
+
+% Primary Lime
+\newcommand{\usePrimaryLime}{
+\definecolor{primaryLL} {HTML}{e6ee9c}
+\definecolor{primaryL} {HTML}{DCE775}
+\definecolor{primary} {HTML}{CDDC39}
+\definecolor{primaryD}{HTML}{AFB42B}
+\definecolor{primaryDD}{HTML}{827717}
+\definecolor{textPrimary} {HTML}{000000}
+}
+
+% Primary Yellow
+\newcommand{\usePrimaryYellow}{
+\definecolor{primaryLL} {HTML}{fff59d}
+\definecolor{primaryL} {HTML}{FFF176}
+\definecolor{primary} {HTML}{FFEB3B}
+\definecolor{primaryD}{HTML}{FBC02D}
+\definecolor{primaryDD}{HTML}{f57f17}
+\definecolor{textPrimary} {HTML}{000000}
+}
+
+% Primary Amber
+\newcommand{\usePrimaryAmber}{
+\definecolor{primaryLL} {HTML}{ffe082}
+\definecolor{primaryL} {HTML}{FFD54F}
+\definecolor{primary} {HTML}{FFC107}
+\definecolor{primaryD}{HTML}{FFA000}
+\definecolor{primaryDD}{HTML}{ff6f00}
+\definecolor{textPrimary} {HTML}{000000}
+}
+
+% Primary Orange
+\newcommand{\usePrimaryOrange}{
+\definecolor{primaryLL} {HTML}{ffcc80}
+\definecolor{primaryL} {HTML}{FFB74D}
+\definecolor{primary} {HTML}{FF9800}
+\definecolor{primaryD}{HTML}{F57C00}
+\definecolor{primaryDD}{HTML}{e65100}
+\definecolor{textPrimary} {HTML}{000000}
+}
+
+% Primary Deep Orange
+\newcommand{\usePrimaryDeepOrange}{
+\definecolor{primaryLL} {HTML}{ffab91}
+\definecolor{primaryL} {HTML}{FF8A65}
+\definecolor{primary} {HTML}{FF5722}
+\definecolor{primaryD}{HTML}{E64A19}
+\definecolor{primaryDD}{HTML}{bf360c}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+% Primary Brown
+\newcommand{\usePrimaryBrown}{
+\definecolor{primaryLL} {HTML}{bcaaa4}
+\definecolor{primaryL} {HTML}{A1887F}
+\definecolor{primary} {HTML}{795548}
+\definecolor{primaryD}{HTML}{5D4037}
+\definecolor{primaryDD}{HTML}{3e2723}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+% Primary Grey
+\newcommand{\usePrimaryGrey}{
+\definecolor{primaryLL} {HTML}{eeeeee}
+\definecolor{primaryL} {HTML}{E0E0E0}
+\definecolor{primary} {HTML}{9E9E9E}
+\definecolor{primaryD}{HTML}{616161}
+\definecolor{primaryDD}{HTML}{212121}
+\definecolor{textPrimary} {HTML}{000000}
+}
+
+% Primary Blue Grey
+\newcommand{\usePrimaryBlueGrey}{
+\definecolor{primaryLL} {HTML}{b0bec5}
+\definecolor{primaryL} {HTML}{90A4AE}
+\definecolor{primary} {HTML}{607D8B}
+\definecolor{primaryD}{HTML}{455A64}
+\definecolor{primaryDD}{HTML}{263238}
+\definecolor{textPrimary} {HTML}{FFFFFF}
+}
+
+
+% ACCENT ---------------------------------------------------------------
+
+\newcommand{\useAccent}[2]{
+\definecolor{accent} {HTML}{#1}
+\definecolor{textAccent} {HTML}{#2}
+}
+
+% Accent Red
+\newcommand{\useAccentRed}{
+\definecolor{accent} {HTML}{F44336}
+\definecolor{textAccent} {HTML}{FFFFFF}
+}
+
+% Accent Pink
+\newcommand{\useAccentPink}{
+\definecolor{accent} {HTML}{E91E63}
+\definecolor{textAccent} {HTML}{FFFFFF}
+}
+
+% Accent Purple
+\newcommand{\useAccentPurple}{
+\definecolor{accent} {HTML}{9c27b0}
+\definecolor{textAccent} {HTML}{FFFFFF}
+}
+
+% Accent Deep Purple
+\newcommand{\useAccentDeepPurple}{
+\definecolor{accent} {HTML}{673AB7}
+\definecolor{textAccent} {HTML}{FFFFFF}
+}
+
+% Accent Indigo
+\newcommand{\useAccentIndigo}{
+\definecolor{accent} {HTML}{3F51B5}
+\definecolor{textAccent} {HTML}{FFFFFF}
+}
+
+% Accent Blue
+\newcommand{\useAccentBlue}{
+\definecolor{accent} {HTML}{2196F3}
+\definecolor{textAccent} {HTML}{FFFFFF}
+}
+
+% Accent Light Blue
+\newcommand{\useAccentLightBlue}{
+\definecolor{accent} {HTML}{03A9F4}
+\definecolor{textAccent} {HTML}{000000}
+}
+
+% Accent Cyan
+\newcommand{\useAccentCyan}{
+\definecolor{accent} {HTML}{00BCD4}
+\definecolor{textAccent} {HTML}{000000}
+}
+
+% Accent Teal
+\newcommand{\useAccentTeal}{
+\definecolor{accent} {HTML}{009688}
+\definecolor{textAccent} {HTML}{000000}
+}
+
+% Accent Green
+\newcommand{\useAccentGreen}{
+\definecolor{accent} {HTML}{4CAF50}
+\definecolor{textAccent} {HTML}{000000}
+}
+
+% Accent Light Green
+\newcommand{\useAccentLightGreen}{
+\definecolor{accent} {HTML}{8BC34A}
+\definecolor{textAccent} {HTML}{000000}
+}
+
+% Accent Lime
+\newcommand{\useAccentLime}{
+\definecolor{accent} {HTML}{CDDC39}
+\definecolor{textAccent} {HTML}{000000}
+}
+
+% Accent Yellow
+\newcommand{\useAccentYellow}{
+\definecolor{accent} {HTML}{FFEB3B}
+\definecolor{textAccent} {HTML}{000000}
+}
+
+% Accent Amber
+\newcommand{\useAccentAmber}{
+\definecolor{accent} {HTML}{FFC400}
+\definecolor{textAccent} {HTML}{000000}
+}
+
+% Accent Orange
+\newcommand{\useAccentOrange}{
+\definecolor{accent} {HTML}{FFC107}
+\definecolor{textAccent} {HTML}{000000}
+}
+
+% Accent Deep Orange
+\newcommand{\useAccentDeepOrange}{
+\definecolor{accent} {HTML}{FF5722}
+\definecolor{textAccent} {HTML}{FFFFFF}
+}
+
+% Accent Blue Grey
+\newcommand{\useAccentBlueGrey}{
+\definecolor{accent} {HTML}{607D8B}
+\definecolor{textAccent} {HTML}{FFFFFF}
+}
+
+% Accent Brown
+\newcommand{\useAccentBrown}{
+\definecolor{accent} {HTML}{795548}
+\definecolor{textAccent} {HTML}{FFFFFF}
+}
+
+% Accent Grey
+\newcommand{\useAccentGrey}{
+\definecolor{accent} {HTML}{9E9E9E}
+\definecolor{textAccent} {HTML}{000000}
+}
+
+
+
+
+\useLightTheme
+\usePrimaryIndigo
+\useAccentPink
+
+% more color settings
+\setbeamercolor{block title}{fg=primary}
+\hypersetup{linkcolor=primary}
+\setbeamercolor{section in toc}{fg=primary}
+\setbeamercolor{subsection in toc}{fg=primary}
+
+
+\mode
+<all>
+
+
+% % ACCENT ---------------------------------------------------------------
+
+% \newcommand{\useAccent}[2]{
+% \definecolor{accent} {HTML}{#1}
+% \definecolor{textAccent} {HTML}{#2}
+% }
+
+% % Accent Red
+% \newcommand{\useAccentRed}{
+% \definecolor{accent} {HTML}{FF1744}
+% \definecolor{textAccent} {HTML}{FFFFFF}
+% }
+
+% % Accent Pink
+% \newcommand{\useAccentPink}{
+% \definecolor{accent} {HTML}{F50057}
+% \definecolor{textAccent} {HTML}{FFFFFF}
+% }
+
+% % Accent Purple
+% \newcommand{\useAccentPurple}{
+% \definecolor{accent} {HTML}{D500F9}
+% \definecolor{textAccent} {HTML}{FFFFFF}
+% }
+
+% % Accent Deep Purple
+% \newcommand{\useAccentDeepPurple}{
+% \definecolor{accent} {HTML}{651FFF}
+% \definecolor{textAccent} {HTML}{FFFFFF}
+% }
+
+% % Accent Indigo
+% \newcommand{\useAccentIndigo}{
+% \definecolor{accent} {HTML}{3D5AFE}
+% \definecolor{textAccent} {HTML}{FFFFFF}
+% }
+
+% % Accent Blue
+% \newcommand{\useAccentBlue}{
+% \definecolor{accent} {HTML}{2979FF}
+% \definecolor{textAccent} {HTML}{FFFFFF}
+% }
+
+% % Accent Light Blue
+% \newcommand{\useAccentLightBlue}{
+% \definecolor{accent} {HTML}{00B0FF}
+% \definecolor{textAccent} {HTML}{000000}
+% }
+
+% % Accent Cyan
+% \newcommand{\useAccentCyan}{
+% \definecolor{accent} {HTML}{00E5FF}
+% \definecolor{textAccent} {HTML}{000000}
+% }
+
+% % Accent Teal
+% \newcommand{\useAccentTeal}{
+% \definecolor{accent} {HTML}{1DE9B6}
+% \definecolor{textAccent} {HTML}{000000}
+% }
+
+% % Accent Green
+% \newcommand{\useAccentGreen}{
+% \definecolor{accent} {HTML}{00E676}
+% \definecolor{textAccent} {HTML}{000000}
+% }
+
+% % Accent Light Green
+% \newcommand{\useAccentLightGreen}{
+% \definecolor{accent} {HTML}{76FF03}
+% \definecolor{textAccent} {HTML}{000000}
+% }
+
+% % Accent Lime
+% \newcommand{\useAccentLime}{
+% \definecolor{accent} {HTML}{C6FF00}
+% \definecolor{textAccent} {HTML}{000000}
+% }
+
+% % Accent Yellow
+% \newcommand{\useAccentYellow}{
+% \definecolor{accent} {HTML}{FFEA00}
+% \definecolor{textAccent} {HTML}{000000}
+% }
+
+% % Accent Amber
+% \newcommand{\useAccentAmber}{
+% \definecolor{accent} {HTML}{FFC400}
+% \definecolor{textAccent} {HTML}{000000}
+% }
+
+% % Accent Orange
+% \newcommand{\useAccentOrange}{
+% \definecolor{accent} {HTML}{FF9100}
+% \definecolor{textAccent} {HTML}{000000}
+% }
+
+% % Accent Deep Orange
+% \newcommand{\useAccentDeepOrange}{
+% \definecolor{accent} {HTML}{FF3D00}
+% \definecolor{textAccent} {HTML}{FFFFFF}
+% }

@@ -1,0 +1,196 @@
+\mode<presentation>
+
+% Requirement
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{ifthen}
+\RequirePackage[many,listings]{tcolorbox}
+\RequirePackage{graphicx}
+\RequirePackage{listings}
+\RequirePackage{caption}
+\RequirePackage{fontspec}
+
+\RequirePackage[outputdir=build,newfloat]{minted}
+% Settings
+\usecolortheme{material}
+\useinnertheme{material}
+\useoutertheme{material}
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamerfont{title}{size=\Huge,series=\bfseries}
+\setbeamerfont{frametitle}{size=\Large,series=\bfseries}
+
+% Footer
+\setbeamercolor{author in head/foot}{bg=primaryD, fg=BGgrey01}
+\setbeamercolor{title in head/foot}{bg=primaryL, fg=BGgrey01}
+\setbeamercolor{institute in head/foot}{fg=BGgrey01}
+\setbeamercolor{date in head/foot}{bg=primary, fg=BGgrey01}
+\setbeamercolor{framenumber in head/foot}{bg=primaryLL, fg=BGgrey01}
+
+% Bibliography
+% \setbeamertemplate{bibliography item}{\insertbiblabel}
+\setbeamertemplate{bibliography item}{\insertbiblabel\LARGE{$\blacktriangleright$}}%[triangle]
+\setbeamercolor{bibliography entry author}{fg=primaryL}
+\setbeamercolor{bibliography entry title}{fg=accent}
+\setbeamercolor{bibliography entry note}{fg=primaryLL}
+
+\newcommand{\hidefooter}{\setbeamertemplate{footline}{}}
+
+\defbeamertemplate*{note page}{custom}
+{%
+      \vskip0\paperheight%
+  \ifbeamercolorempty[bg]{note page}{}{%
+    \insertvrule{\paperheight}{note page.bg}%
+    \vskip-0.95\paperheight%
+  }%
+  \begin{minipage}[t][0cm]{\linewidth}
+  \nointerlineskip
+  \begin{multicols}{2}
+  \insertnote
+  \end{multicols}
+  \end{minipage}
+}
+
+\setbeamerfont{note page}{size=\footnotesize}
+\setbeamertemplate{note page}[custom]
+\setbeamercolor{note page}{bg=BGgrey03, fg=white}
+
+\defbeamertemplate*{footline}{infolines theme}
+{
+\leavevmode%
+\centering
+\begin{tcbraster}[
+raster columns=4,
+raster force size=false,
+height=3.5ex,
+nobeforeafter,
+enhanced,
+arc = 0pt,
+outer arc = 0pt,
+titlerule = 0pt,
+boxsep = 0pt,
+left = 0pt,
+right = 0pt,
+top=0pt,
+bottom=0pt,
+box align=center,
+halign=center,
+valign=center,
+sharpish corners=all,
+fuzzy shadow={0mm}{ 0.6mm}{ -0.2mm}{0.2mm}{shadow!20!BGgrey03}, % topsmall
+fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey03}, % bottomSmall
+fuzzy shadow={0mm}{-0.2mm}{-0.2mm}{0.2mm}{shadow!20!BGgrey03}, % bottomBig
+]
+\hspace{0.015\paperwidth}
+\begin{tcolorbox}[
+colback=primaryD,
+coltext=BGgrey01,
+width=.20\paperwidth,
+]%
+\centering
+\usebeamerfont{title in head/foot}~\insertshortauthor~%
+\end{tcolorbox}%
+%
+\hspace{0.008\paperwidth}
+\begin{tcolorbox}[
+colback=primaryL,
+coltext=BGgrey01,
+width=.40\paperwidth,
+]%
+\centering\usebeamerfont{title in head/foot}\inserttitle~-~\insertsubtitle
+\end{tcolorbox}%
+%
+\hspace{0.008\paperwidth}
+\begin{tcolorbox}[
+colback=primary,
+coltext=BGgrey01,
+width=.20\paperwidth,
+]%
+\centering\usebeamerfont{title in head/foot}~\insertshortdate~
+\end{tcolorbox}%
+%
+\hspace{0.008\paperwidth}
+\begin{tcolorbox}[
+colback=primaryLL,
+coltext=BGgrey01,
+width=.10\paperwidth,
+]%
+\centering\usebeamerfont{title in head/foot}\insertframenumber{}~/~\inserttotalframenumber
+\end{tcolorbox}%
+\end{tcbraster}
+}
+\newcommand{\setCardSettings}{%
+\tcbset{%
+colback=BGgrey04, colbacktitle=primary, coltitle=textPrimary, coltext=text,%
+enhanced, sharpish corners=all,%
+fuzzy shadow={0mm}{ 0.9mm}{ 0.6mm}{0.2mm}{shadow!20!BGgrey01}, % top
+fuzzy shadow={0mm}{-0.6mm}{-0.1mm}{0.2mm}{shadow!40!BGgrey01}, % bottomSmall
+fuzzy shadow={0mm}{-0.2mm}{-0.2mm}{0.2mm}{shadow!20!BGgrey01}, % bottomBig
+left=6mm, right=6mm, top=6mm, bottom=6mm, middle=4mm,%
+title filled, boxrule=0mm,%
+segmentation code={\path[draw=BGgrey01](segmentation.west) -- (segmentation.east);}%
+}
+}
+
+\newenvironment{titleframe}{
+\setbeamertemplate{footline}{}
+\begin{frame}
+  \titlepage
+}{\end{frame}}
+
+\setCardSettings
+
+\newenvironment{fullframe}{
+\setbeamertemplate{footline}{}
+\begin{frame}
+}{\end{frame}}
+
+\newenvironment{card}[1][pR23s2OTKY]{%
+  \setCardSettings
+    \ifthenelse{\equal{#1}{pR23s2OTKY}}{%
+      \begin{tcolorbox}%
+    }{%
+      \begin{tcolorbox}[colbacktitle=accent, coltitle=textAccent,fonttitle=\bfseries, title=\begin{minipage}{\linewidth}{\textbf{#1}}\end{minipage}, left=3mm, right=3mm, top=1mm, bottom=1mm, middle=0mm, toptitle=0mm, bottomtitle=0mm]%
+    }%
+}{%
+  \end{tcolorbox}%
+}
+
+\newenvironment{cardTiny}{%
+  \setCardSettings
+  \begin{tcolorbox}[colbacktitle=primary, left=4mm, right=4mm, top=2mm, bottom=2mm, middle=4mm, toptitle=4mm, bottomtitle=3mm,]%
+}{%
+  \end{tcolorbox}%
+}
+
+
+\newcommand{\cardImg}[3][pR23s2OTKY]{%
+  \setCardSettings
+  \ifthenelse{\equal{#1}{pR23s2OTKY}}{%
+    \begin{tcolorbox}[lower separated=false, leftupper=0mm, rightupper=0mm, top=0mm, bottom=0mm, middle=1.5mm, boxsep=0mm, width=#3,]%
+      \includegraphics[width=\textwidth]{#2}
+    \end{tcolorbox}
+  }{%
+    \begin{tcolorbox}[lower separated=false, leftupper=0mm, rightupper=0mm, top=0mm, middle=1.5mm, boxsep=0mm, leftlower=6mm, rightlower=6mm, bottom=6mm, , width=#3,]%
+      \includegraphics[width=\textwidth]{#2}
+      \tcblower
+      #1%
+    \end{tcolorbox}
+  }%
+}
+
+\newenvironment{frameImg}[2][width]{%
+  \setCardSettings
+  \ifthenelse{\equal{#1}{width}}{%
+    \usebackgroundtemplate{\hspace{-0.5\paperwidth}\parbox[c][\paperheight][c]{2\paperwidth}{\centering\includegraphics[width=\paperwidth, keepaspectratio=true]{#2}}}%
+  }{%
+    \usebackgroundtemplate{\hspace{-0.5\paperwidth}\parbox[c][\paperheight][c]{2\paperwidth}{\centering\includegraphics[height=\paperheight, keepaspectratio=true]{#2}}}%
+  }%
+  \begin{frame}
+}{%
+  \end{frame}
+}
+
+
+\mode<all>
